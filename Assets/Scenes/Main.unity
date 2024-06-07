@@ -340,7 +340,7 @@ Transform:
   m_GameObject: {fileID: 309403985}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 400.7, y: 2.4, z: 18}
+  m_LocalPosition: {x: 400.7, y: 2.1, z: 18}
   m_LocalScale: {x: 158.31523, y: 149.26996, z: 423.24142}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -357,6 +357,7 @@ GameObject:
   - component: {fileID: 549591463}
   - component: {fileID: 549591462}
   - component: {fileID: 549591461}
+  - component: {fileID: 549591464}
   m_Layer: 0
   m_Name: Terrain_(256.00, 0.00, 0.00)
   m_TagString: Untagged
@@ -438,6 +439,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &549591464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549591460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb257b300d8d9d748bf8d0eeb8190b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distSource: 2
+  baseMesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  terrain: {fileID: 15600000, guid: d77df68ad7e6eac46984883759512e93, type: 2}
+  terrainLayers:
+  - {fileID: 8574412962073106934, guid: c18288fc173c17f45b6f34b969db319e, type: 2}
+  chunkCount: {x: 16, y: 16}
+  sceneFilters: []
+  bladeType: 2
+  multipleMeshes: 0
+  grassBladeMesh: {fileID: -7426583211642308163, guid: 002bf449675252849a29782b177a97f2,
+    type: 3}
+  grassBladeMeshes:
+  - {fileID: 0}
+  meshDensityValues:
+  - 1
+  multipleMaterials: 0
+  material: {fileID: 2100000, guid: a6800ec55fd981a458a652a6c9eb55c1, type: 2}
+  materials:
+  - {fileID: 0}
+  shadowMode: 1
+  renderLayer:
+    m_LayerIndex: 0
+  pointCount: 1000
+  multiplyByArea: 0
+  pointLODFactor: 1
+  randomiseSeed: 1
+  seed: 0
+  overwriteNormalDirection: 0
+  forcedNormal: {x: 0, y: 1, z: 0}
+  useDensity: 1
+  densityCutoff: 0.5
+  useLength: 1
+  lengthMapping: {x: 0, y: 1}
+  projectType: 0
+  projectMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  boundingBoxOffset:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &1184378032
 GameObject:
   m_ObjectHideFlags: 0
