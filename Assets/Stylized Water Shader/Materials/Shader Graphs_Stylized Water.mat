@@ -85,7 +85,7 @@ Material:
     - _Wave_Speed: 0.57
     - _Wave_Steepness: 0.088
     m_Colors:
-    - _Deep_Color: {r: 0, g: 0.3102526, b: 0.5943396, a: 0.36862746}
+    - _Deep_Color: {r: 0, g: 0.22946867, b: 0.44150946, a: 0.85882354}
     - _Diffuse_Color: {r: 1, g: 0, b: 0, a: 1}
     - _Foam_Color: {r: 0, g: 1, b: 0.46160954, a: 0.4392157}
     - _Horizon_Color: {r: 0.9490197, g: 1, b: 1, a: 1}

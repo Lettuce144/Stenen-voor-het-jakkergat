@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EDEN_ErosionTools
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 3dbe2cc14a576c84ea9ad2ee0a9c8f9e,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: h_Iterations
+    value: 100000
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: h_Resolution
+    value: 256
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: h_ErosionSteps
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: Windiness
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: WindDirection.x
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: WindDirection.y
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: w_Resolution
+    value: 257
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TerraceSpacing
+    value: 15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: TerraceAngle
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SharpenStrength
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sharpenIterations
+    value: 10
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: PeakMixStrength
+    value: 0.7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: SmoothingWidth
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: HydraulicErosionComputeShader
+    value: 
+    objectReference: {fileID: 7200000, guid: 10414e31ef4528d4dae6ae6706d296eb, type: 3}
+  - target: {fileID: 0}
+    propertyPath: WindErosionComputeShader
+    value: 
+    objectReference: {fileID: 7200000, guid: 2c22a7d82433e6e468b53d8ee8923a11, type: 3}
+  - target: {fileID: 0}
+    propertyPath: SmoothSharpenComputeShader
+    value: 
+    objectReference: {fileID: 7200000, guid: 31c4b9e035f948e49bf4d78f49ea872d, type: 3}
+  - target: {fileID: 0}
+    propertyPath: TerraceComputeShader
+    value: 
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
