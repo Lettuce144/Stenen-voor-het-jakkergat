@@ -1,75 +1,8 @@
-using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
-using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 public class CameraManager : MonoBehaviour
 {
-
-	/*	private Vector2 _delta;
-
-		private bool _isMoving;
-		private bool _isRotating;
-		private bool _isBusy;
-
-		private CinemachineVirtualCamera _camera;
-		private CinemachineOrbitalTransposer _transposer;
-
-
-		[SerializeField] 
-		private float movementSpeed = 10.0f;
-		[SerializeField] 
-		private float zoomSensitivty = 10.0f;
-
-
-		private void Start()
-		{
-			_camera = GetComponent<CinemachineVirtualCamera>();
-			_transposer = _camera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
-		}
-
-		public void OnLook(InputAction.CallbackContext context)
-		{
-			_delta = context.ReadValue<Vector2>();
-		}
-
-		public void OnMove(InputAction.CallbackContext context)
-		{
-			_isMoving = context.started || context.performed;
-		}
-
-		public void OnZoom(InputAction.CallbackContext context)
-		{
-			// Oh god this is bad, very very bad code
-			// Too bad tho.
-			float z = context.ReadValue<float>();
-			if (z > 0)
-			{ 
-				_transposer.m_FollowOffset.z += zoomSensitivty;
-				_transposer.m_FollowOffset.y += zoomSensitivty / _transposer.m_FollowOffset.y;
-			}
-			else if (z < 0)
-			{ 
-				_transposer.m_FollowOffset.z -= zoomSensitivty;
-				_transposer.m_FollowOffset.y -= zoomSensitivty / _transposer.m_FollowOffset.y;
-			}
-		}
-
-		private void LateUpdate()
-		{
-			*//*if (_isMoving)
-			{
-				Vector3 position = transform.right * (_delta.x * -movementSpeed);
-				position += transform.up * (_delta.y * -movementSpeed);
-				transform.position += position * Time.deltaTime;
-			}*//*
-
-		}*/
-
 	[SerializeField]
 	private Transform _target;
 
@@ -83,6 +16,7 @@ public class CameraManager : MonoBehaviour
 	private float _distance = 10f;
 
 	private InputAction lookAction;
+	private InputAction mouseClickAction;
 	private bool shouldRotate;
 
 	public void Start()
@@ -91,7 +25,12 @@ public class CameraManager : MonoBehaviour
 		var map = new InputActionMap("CameraControls");
 		lookAction = map.AddAction("Look", binding: "<Mouse>/delta");
 		lookAction.performed += ctx => RotateCamera(ctx.ReadValue<Vector2>());
-		clickAction = map.AddAction("Click", binding: "<Mouse>/leftButton");
+
+		// Clicking
+		mouseClickAction = map.AddAction("Click", binding: "<Mouse>/leftButton");
+		mouseClickAction.performed += ctx => shouldRotate = ctx.ReadValue<float>() > 0;
+		mouseClickAction.canceled += ctx => shouldRotate = false;
+
 		map.Enable();
 	}
 
